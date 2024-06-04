@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List</title>
+ <style>
+   .container {
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  min-height: 100vh;
+  
+}
+
+
+.product-container {
+  /* Existing styles for product-container */
+  display: flex; /* Arrange products horizontally */
+  flex-wrap: wrap; /* Allow products to wrap to next line */
+  margin: 0px;
+}
+
+.product {
+  /* Existing styles for product */
+  display: flex; /* Arrange product name and button horizontally */
+  align-items: center; /* Align vertically */
+  justify-content: space-between; /* Distribute evenly */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 200px; /* Adjust width as needed */
+}
+
+.product-name {
+  /* Existing styles for product-name */
+  font-weight: bold;
+}
+
+.product button {
+  /* Existing styles for product button */
+  background-color: black;
+  color: white;
+  padding: 5px 10px; /* Adjust padding for smaller button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .product {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+}
+
+
+ </style>
+</head>
+<body>
+<div class="container">  <div class="product-container">
+      <div class="product">
+        <span class="product-name"></span>
+        <button class="myButton">View Details</button>
+      </div>
+      
+    </div>
+    <div class="product-container">
+      <div class="product">
+        <span class="product-name">T-Shirt</span>
+        <button class="myButton">View Details</button>
+      </div>
+      
+    </div>
+    <div class="product-container">
+      <div class="product">
+        <span class="product-name">T-Shirt</span>
+        <button class="myButton">View Details</button>
+      </div>
+      
+    </div>
+    <div class="product-container">
+      <div class="product">
+        <span class="product-name">T-Shirt</span>
+        <button class="myButton">View Details</button>
+      </div>
+      
+    </div>
+  </div>
+  
+
+  <script>
+    const buttons = document.querySelectorAll(".myButton");
+
+buttons.forEach(button => {
+  button.addEventListener("click", function() {
+    this.style.backgroundColor = "yellow";
+    this.style.color = "blue";
+     // Change to your desired color
+  });
+});
+
+
+  </script>
+</body>
+</html>
